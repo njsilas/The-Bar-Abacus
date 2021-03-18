@@ -1,8 +1,8 @@
-import { combinedReducers } from 'redux'
+import { combineReducers } from 'redux'
 import { mixersReducer } from './mixersReducer'
 import { liquorsReducer } from './liquorsReducer'
 
-export const rootReducer = combinedReducers({
+export const rootReducer = combineReducers({
     mixers: mixersReducer,
     liquors: liquorsReducer
 })
