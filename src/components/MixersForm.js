@@ -9,9 +9,15 @@ class MixersForm extends Component {
         ingreds: ''
 
     }
+    handleChange = e => {
+        const {name, value} = e.target
+        this.setState({
+         [name]: value
+        })
+    }
     render() {
         return (
-            <form>
+            <form onSubmit={this.handleSubmit()}>
             <label>Name:</label>
             <input type='text' value={this.state.name} onChange={this.handleChange} name="name"/>
             <br />
