@@ -18,6 +18,10 @@ class LiquorsFrom extends Component {
         [name]: value
        })
    }
+   handleSubmit = e => {
+    e.preventDefault()
+    this.props.addLiq(this.state)
+   }
     render() {
         return (
             <form>

@@ -6,11 +6,14 @@ export const fetchLiquor = () => {
     }
 }
 export const addLiq = liquor => {
-    fetch('http://localhost:3000/liquors', {
-        method: 'POST',
-        body: JSON.stringify(liquor),
-        headers: {'Content-Type': 'application/json' }
-    })
-    .then(resp => resp.json())
-    .then(liquor => dispatch({ type: 'ADD_LIQ', payload: liquor }))
+    return dispatch => {
+        fetch('http://localhost:3000/liquors', {
+            method: 'POST',
+            body: JSON.stringify(liquor),
+            headers: {'Content-Type': 'application/json' }
+        })
+        .then(resp => resp.json())
+        .then(liquor => dispatch({ type: 'ADD_LIQ', payload: liquor}))
+    }
+     
 }
