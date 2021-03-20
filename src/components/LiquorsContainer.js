@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Route } from 'react-router';
 import { fetchLiquor } from '../actions/liquorsActions'
-import LiquorsFrom from './LiquorsFrom'
+import LiquorsForm from './LiquorsForm'
+import LiquorsList from './LiquorsList';
 class LiquorsContainer extends Component {
    componentDidMount() {
        this.props.fetchLiquor()
@@ -9,10 +11,11 @@ class LiquorsContainer extends Component {
     render() {
         return (
             <div>
-               <LiquorsFrom />
+            <LiquorsList />
+               
             </div>
         );
     }
 }
-
+//
 export default connect(null, { fetchLiquor }) (LiquorsContainer);

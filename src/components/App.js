@@ -1,9 +1,11 @@
 import React from 'react';
 import  Router  from './Router'
+import LiquorsContainer from './LiquorsContainer'
 const app = () => {
     return (
         <div>
-            <Router />
+            
+           <LiquorsContainer />
         </div>
     );
 };
