@@ -6,11 +6,12 @@ export const fetchMixer = () => {
     }
 }
 export const addMixer = mixer => {
-    fetch('http://localhost:3000/mixers', {
+    return dispatch => {
+        fetch('http://localhost:3000/mixers', {
         method: 'POST',
         body: JSON.stringify(mixer),
         headers: {'Content-Type': 'application/json' }
     })
     .then(resp => resp.json())
     .then(mixer => dispatch({ type: 'ADD_MIXER', payload: mixer }))
-}
+}}

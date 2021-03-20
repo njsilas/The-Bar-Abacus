@@ -15,6 +15,10 @@ class MixersForm extends Component {
          [name]: value
         })
     }
+    handleSubmit = e => {
+        e.preventDefault()
+        this.props.addMixer(this.state)
+       }
     render() {
         return (
             <form onSubmit={this.handleSubmit()}>

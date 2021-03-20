@@ -1,9 +1,9 @@
 import React from 'react';
-import LiquorsContainer from './LiquorsContainer'
+import  Router  from './Router'
 const app = () => {
     return (
         <div>
-            <LiquorsContainer />
+            <Router />
         </div>
     );
 };
