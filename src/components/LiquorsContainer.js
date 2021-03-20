@@ -11,7 +11,7 @@ class LiquorsContainer extends Component {
     render() {
         return (
             <div>
-            <LiquorsList />
+            liquor
                
             </div>
         );

@@ -1,7 +1,7 @@
 import React from 'react';
 import  Router  from './Router'
 import LiquorsContainer from './LiquorsContainer'
-const app = () => {
+const App = () => {
     return (
         <div>
             
@@ -10,4 +10,4 @@ const app = () => {
     );
 };
 
-export default app;
+export default App;
