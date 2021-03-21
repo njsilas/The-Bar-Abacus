@@ -5,7 +5,7 @@ const MixersList = ({ mixers }) => {
    
     return (
         <div>
-           <MixersForm />
+           
            {mixers.map(mixer => <ul><li key={mixer.id}> {mixer.name}</li> </ul>)}
         </div>
     );

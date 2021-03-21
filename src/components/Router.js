@@ -5,6 +5,7 @@ import Home from '../components/Home'
 import MixersContainer from './MixersContainer'
 import About from '../components/About'
 //import MixersList from './MixersList'
+import CocktailsComponent from './CocktailsComponent'
 import LiquorsContainer from './LiquorsContainer';
 class Router extends Component {
     render() {
@@ -15,7 +16,7 @@ class Router extends Component {
                     <Route exact path='/about' component={About} />
                     <Route exact path='/liquors' component={LiquorsContainer} />
                     <Route exact path='/mixers' component={MixersContainer} />
-                    
+                    <Route exact path='/cocktails' component={CocktailsComponent} />
                 </Switch>
             </div>
         );
