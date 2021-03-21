@@ -12,9 +12,9 @@ const store = createStore(
 )
 ReactDOM.render(
     <Provider store={store}>
-        
+        <Router >
     <App />
-    
+    </Router>
     </Provider>,
     document.getElementById('root')
 )

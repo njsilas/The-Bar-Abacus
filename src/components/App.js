@@ -4,8 +4,9 @@ import LiquorsContainer from './LiquorsContainer'
 const App = () => {
     return (
         <div>
-            
            <LiquorsContainer />
+            <Router />
+           
         </div>
     );
 };

@@ -12,7 +12,7 @@ class Router extends Component {
                 <Switch>
                     <Route exact path='/' component={Home} />
                     <Route exact path='/about' component={About} />
-                    <Route path='/liquors' component={LiquorsContainer} />
+                    <Route exact path='/liquors' component={LiquorsList} />
                     <Route exact path='/mixers' component={MixersContainer} />
                     
                 </Switch>
