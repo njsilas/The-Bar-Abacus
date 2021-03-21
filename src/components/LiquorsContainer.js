@@ -11,11 +11,11 @@ class LiquorsContainer extends Component {
     render() {
         return (
             <div>
-            <LiquorsForm />
-               
+           <LiquorsForm />
+            <LiquorsList />
             </div>
         );
     }
 }
-//
+
 export default connect(null, { fetchLiquor }) (LiquorsContainer);

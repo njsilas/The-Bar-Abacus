@@ -5,10 +5,9 @@ import MixersContainer from './MixersContainer'
 const App = () => {
     return (
         <div>
-           <LiquorsContainer />
-            <MixersContainer />
-            <Router />
            
+            <Router />
+            
         </div>
     );
 };

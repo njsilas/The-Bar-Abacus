@@ -2,7 +2,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchMixer } from '../actions/mixersActions'
-import MixersFrom from './MixersForm'
+import MixersForm from './MixersForm'
+import MixersList from './MixersList'
 class MixersContainer extends Component {
     componentDidMount() {
         this.props.fetchMixer()
@@ -10,7 +11,8 @@ class MixersContainer extends Component {
     render() {
         return (
             <div>
-                <MixersFrom />
+                <MixersForm />
+                <MixersList />
             </div>
         );
     }
