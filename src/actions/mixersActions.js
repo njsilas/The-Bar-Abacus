@@ -13,5 +13,5 @@ export const addMixer = mixer => {
         headers: {'Content-Type': 'application/json' }
     })
     .then(resp => resp.json())
-    .then(mixer => dispatch({ type: 'ADD_MIXER', payload: mixer }))
+    .then(mixer => dispatch({ type: 'ADD_MIXER', payload: mixer}))
 }}
