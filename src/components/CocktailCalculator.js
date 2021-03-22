@@ -1,7 +1,7 @@
 
 import React, { Component, useState } from 'react';
 import { connect } from 'react-redux' 
-import { firstFilter } from '../actions/cocktailActions'
+import LiquorsDropdown from './LiquorsDropdown'
 class CocktailCalculator extends Component {
  
     addNextForm = e => {
@@ -10,13 +10,14 @@ class CocktailCalculator extends Component {
            
        }
     }
+    
     render() {
-      let liquorsList = [];
-      this.props.liquors.forEach(({id, brand, ppo }) => liquorsList.push({id, brand, ppo}))
-      let uniqueLiquor = [...new Set(liquorsList.map(liquor => liquor.id, liquor.brand, liquor.ppo ))]
-      let mixersList = []
-
-        console.log(firstFilter)
+     // let liquorsList = [];
+      //this.props.liquors.forEach(({id, brand, ppo }) => liquorsList.push({id, brand, ppo}))
+      //let uniqueLiquor = [...new Set(liquorsList.map(liquor => liquor.id, liquor.brand, liquor.ppo ))]
+      //let mixersList = []
+       console.log(this.props.liquors)
+       
         return (
             <div>
                 <select name="Types" id="types" onChange={this.addNextForm}>
@@ -25,8 +26,8 @@ class CocktailCalculator extends Component {
                     <option value="Spirit">Spirit</option>
                 </select>
                 <select name="firstFilter" id="ft">
-                    <option value=""></option>
-                    <option value="">testing</option>
+                    
+                  <LiquorsDropdown />
                 </select>
                 <input type="number"></input>
                 <p>cocktail placement</p>
