@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux'
-import MixersForm from './MixersForm'
+//import MixersForm from './MixersForm'
 const MixersList = ({ mixers }) => {
    
     return (

@@ -3,7 +3,7 @@ import { fetchMixer } from '../actions/mixersActions'
 import { fetchLiquor } from '../actions/liquorsActions'
 import { connect } from 'react-redux'
 import  CocktailCalculator  from './CocktailCalculator'
-import liquorDropdown from './LiquorsDropdown'
+
 class CocktailsComponent extends Component {
     componentDidMount() {
         this.props.fetchLiquor()

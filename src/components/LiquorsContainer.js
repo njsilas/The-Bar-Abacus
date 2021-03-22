@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Route } from 'react-router';
+
 import { fetchLiquor } from '../actions/liquorsActions'
 import LiquorsForm from './LiquorsForm'
 import LiquorsList from './LiquorsList';

@@ -1,35 +1,45 @@
 
-import React, { Component, useState } from 'react';
+import React, { Component} from 'react';
 import { connect } from 'react-redux' 
 import LiquorsDropdown from './LiquorsDropdown'
+import MixerCocktail from './MixerCocktail'
 class CocktailCalculator extends Component {
+ state = {
+     cocktailIng: [],
+     cocktailppo: []
+
+ }
  
-    addNextForm = e => {
-        console.log(this.props.cocktail, e.target.value)
-       if(e.target.value == "Mixer") {
-           
-       }
+    addToDrink = e => {
+        e.preventDefault()
+        
+        console.log(e.target.dataset)
     }
-    
     render() {
      // let liquorsList = [];
       //this.props.liquors.forEach(({id, brand, ppo }) => liquorsList.push({id, brand, ppo}))
       //let uniqueLiquor = [...new Set(liquorsList.map(liquor => liquor.id, liquor.brand, liquor.ppo ))]
       //let mixersList = []
-       console.log(this.props.liquors)
+       
        
         return (
             <div>
-                <select name="Types" id="types" onChange={this.addNextForm}>
-                    <option value=""></option>
-                    <option value="Mixer">Mixer</option>
-                    <option value="Spirit">Spirit</option>
-                </select>
-                <select name="firstFilter" id="ft">
-                    
+                
+      
+            <MixerCocktail />
+
+               
+                <select name="liquorselect" onChange={this.addToDrink}>
+                <option value=""></option>
                   <LiquorsDropdown />
                 </select>
+           <form onSubmit={this.addToDrink}>
+               <label>Spirits:</label>
+               
                 <input type="number"></input>
+                <input type="submit" value="add to drink" />
+           </form>
+               
                 <p>cocktail placement</p>
             </div>
         );
