@@ -3,3 +3,7 @@ export const firstFilter = input => {
         return this.props.mixers.map(mixer => mixer.name)
     }
 }
+export const nuFilter = input => {
+            return 
+            
+}
