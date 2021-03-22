@@ -2,11 +2,9 @@
 import React, { Component, useState } from 'react';
 import { connect } from 'react-redux' 
 class CocktailCalculator extends Component {
-    state = {
-
-    }
+ 
     addNextForm = e => {
-        console.log(e.target)
+     
     }
     render() {
         console.log(this.props)
@@ -24,7 +22,8 @@ class CocktailCalculator extends Component {
 const mapStateToProps = state => {
     return {
     liquors: state.liquors,
-    mixers: state.mixers
+    mixers: state.mixers,
+   cocktail: state.cocktail
     }
 }
 export default connect(mapStateToProps)(CocktailCalculator);
