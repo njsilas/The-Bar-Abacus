@@ -3,11 +3,9 @@ import MixerDropdown from './MixerDropdown'
 import { connect } from 'react-redux'
 import { fetchMixer } from '../../actions/mixersActions'
 class MixerCocktail extends Component {
-    state = {
-        ingred: '',
-        ounces: '',
-        ppo: ''
-    }
+  state = {
+    
+  }
     componentDidMount() {
     
         this.props.fetchMixer()
@@ -15,10 +13,10 @@ class MixerCocktail extends Component {
     ounceChange = e => {
     
        
-     const {name, value} = e.target
-     console.log(this.state)
+     const value = e.target.value
+     
      this.setState({
-         ounces: value
+         oz: value
      })
       
     }

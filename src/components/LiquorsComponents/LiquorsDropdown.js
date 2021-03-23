@@ -4,7 +4,7 @@ const LiquorsDropdown = ({ liquors }) => {
    
     return (
        
-           liquors.map(liquor => <option key={liquor.id} value={liquor.ppo} name={liquor.brand}> {liquor.brand}</option> )
+           liquors.map(liquor => <option key={liquor.id} value={liquor.id} name={liquor.brand}> {liquor.brand}</option> )
        
     );
 };

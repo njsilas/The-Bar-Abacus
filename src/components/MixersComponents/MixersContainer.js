@@ -5,9 +5,7 @@ import { fetchMixer } from '../../actions/mixersActions'
 import MixersForm from './MixersForm'
 import MixersList from './MixersList'
 class MixersContainer extends Component {
-    componentDidMount() {
-        this.props.fetchMixer()
-    }
+  
     render() {
         return (
             <div>
@@ -18,4 +16,4 @@ class MixersContainer extends Component {
     }
 }
 
-export default connect(null, { fetchMixer }) (MixersContainer);
+export default connect(null) (MixersContainer);

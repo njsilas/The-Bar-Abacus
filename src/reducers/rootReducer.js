@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux'
 import { mixersReducer } from './mixersReducer'
 import { liquorsReducer } from './liquorsReducer'
-//import { cocktailReducer } from './cocktailReducer'
+import { cocktailsReducer } from './cocktailsReducer'
 
 export const rootReducer = combineReducers({
     mixers: mixersReducer,
     liquors: liquorsReducer,
-    //cocktail: cocktailReducer
+   cocktail: cocktailsReducer
 })
