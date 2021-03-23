@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
-import { addMixer } from '../actions/mixersActions'
+import { addMixer } from '../../actions/mixersActions'
 class MixersForm extends Component {
     state = {
         mixer_type: '',

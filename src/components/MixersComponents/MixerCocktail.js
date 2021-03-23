@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import MixerDropdown from './MixerDropdown'
 import { connect } from 'react-redux'
-import { fetchMixer } from '../actions/mixersActions'
+import { fetchMixer } from '../../actions/mixersActions'
 class MixerCocktail extends Component {
     state = {
         ingred: '',

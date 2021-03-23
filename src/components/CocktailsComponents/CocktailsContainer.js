@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import { fetchMixer } from '../actions/mixersActions'
-import { fetchLiquor } from '../actions/liquorsActions'
+import { fetchMixer } from '../../actions/mixersActions'
+import { fetchLiquor } from '../../actions/liquorsActions'
 import { connect } from 'react-redux'
 import  CocktailCalculator  from './CocktailCalculator'
 
-class CocktailsComponent extends Component {
+class CocktailsContainer extends Component {
   
     render() {
        
@@ -21,4 +21,4 @@ class CocktailsComponent extends Component {
 
 
 
-export default connect(null)(CocktailsComponent);
+export default connect(null)(CocktailsContainer);

@@ -5,7 +5,7 @@ import Home from '../components/Home'
 import MixersContainer from './MixersComponents/MixersContainer'
 import About from '../components/About'
 //import MixersList from './MixersList'
-import CocktailsComponent from './CocktailsComponent'
+import CocktailsComponent from './CocktailsComponents/CocktailsContainer'
 import LiquorsContainer from './LiquorsComponents/LiquorsContainer';
 class Router extends Component {
     render() {
