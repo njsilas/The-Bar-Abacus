@@ -4,7 +4,7 @@ const LiquorsList = ({ liquors }) => {
    
     return (
         <div>
-           {liquors.map(liquor => <ul><li key={liquor.id}> {liquor.brand}</li> </ul>)}
+           {liquors.map(liquor => <ul key="liquormap"><li key={liquor.id}> {liquor.brand}</li> </ul>)}
         </div>
     );
 };

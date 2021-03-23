@@ -5,10 +5,7 @@ import { connect } from 'react-redux'
 import  CocktailCalculator  from './CocktailCalculator'
 
 class CocktailsComponent extends Component {
-    componentDidMount() {
-        this.props.fetchLiquor()
-        this.props.fetchMixer()
-    }
+  
     render() {
        
         return (
@@ -19,17 +16,9 @@ class CocktailsComponent extends Component {
         );
     }
 }
-const mapStateToProps = state => {
-return {
-liquors: state.Liquors,
-mixers: state.mixers
-}
 
-}
-const mapDispatchToProps = dispatch => {
-    return {
-        fetchLiquor: () => dispatch(fetchLiquor()),
-        fetchMixer: () => dispatch(fetchMixer())
-    }
-}
-export default connect(mapStateToProps, mapDispatchToProps)(CocktailsComponent);
+
+
+
+
+export default connect(null)(CocktailsComponent);

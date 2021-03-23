@@ -1,15 +1,16 @@
 
 import React, { Component} from 'react';
 import { connect } from 'react-redux' 
-import LiquorsDropdown from './LiquorsDropdown'
+import LiquorsDropdown from './LiquorsComponents/LiquorsDropdown'
 import MixerCocktail from './MixerCocktail'
 class CocktailCalculator extends Component {
- state = {
-     cocktailIng: [],
-     cocktailppo: []
-
- }
  
+ handleChange = e => {
+    const {name, value} = e.target
+    this.setState({
+     [name]: value
+    })
+}
     addToDrink = e => {
         e.preventDefault()
         
@@ -40,16 +41,15 @@ class CocktailCalculator extends Component {
                 <input type="submit" value="add to drink" />
            </form>
                
-                <p>cocktail placement</p>
+                <p></p>
             </div>
         );
     }
 }
+
 const mapStateToProps = state => {
     return {
-    liquors: state.liquors,
-    mixers: state.mixers,
-    cocktail :state.cocktail
-    }
+     cocktail: state.cocktail
+    } 
 }
 export default connect(mapStateToProps)(CocktailCalculator);

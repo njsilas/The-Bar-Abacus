@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 import { Switch, Route} from 'react-router-dom'
 import Home from '../components/Home'
 //import LiquorsList from './LiquorsList'
-import MixersContainer from './MixersContainer'
+import MixersContainer from './MixersComponents/MixersContainer'
 import About from '../components/About'
 //import MixersList from './MixersList'
 import CocktailsComponent from './CocktailsComponent'
-import LiquorsContainer from './LiquorsContainer';
+import LiquorsContainer from './LiquorsComponents/LiquorsContainer';
 class Router extends Component {
     render() {
         return (

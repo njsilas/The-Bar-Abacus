@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
-import { addLiq } from '../actions/liquorsActions'
+import { addLiq } from '../../actions/liquorsActions'
 class LiquorsFrom extends Component {
    state = {
        brand: '',

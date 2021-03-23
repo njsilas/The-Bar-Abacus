@@ -4,10 +4,10 @@ import { connect } from 'react-redux'
 const MixersList = ({ mixers }) => {
    
     return (
-        <div>
+        <>
            
-           {mixers.map(mixer => <ul><li key={mixer.id}> {mixer.name}</li> </ul>)}
-        </div>
+           {mixers.map(mixer => <ul key="MixersList"><li key={mixer.id}> {mixer.name}</li> </ul>)}
+        </>
     );
 };
 const mapStateToProps = state => {
