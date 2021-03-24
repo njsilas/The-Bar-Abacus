@@ -1,9 +1,9 @@
-import React, { useImperativeHandle } from 'react';
+import React from 'react';
 import { connect } from 'react-redux'
 
 const MixersDropdown = ({ mixers }) => {
    return  (
-    mixers.map(mixer => <option key={mixer.id} name={mixer.name} value={mixer.ppo} > {mixer.name}</option>)
+    mixers.map(mixer => <option key={mixer.id} name={mixer.name} value={mixer.id} > {mixer.name}</option>)
    )
    
    

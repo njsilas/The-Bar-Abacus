@@ -10,7 +10,7 @@ class CocktailLiquorForm extends Component {
     }
     findliquorid = id => {
         if(id === 0) {
-            return({brand: '', ppo: 0})
+            return({ingname: '', ppo: 0})
         }
         else {
             const spiritneeded = this.props.liquors.filter(liquor => liquor.id === id)
@@ -44,13 +44,16 @@ class CocktailLiquorForm extends Component {
         
         
         return (
+            
             <form onSubmit={this.submitLiquor}>
+                <label for="addliquor">Add Spirit:</label>
                 <select name="Liquors" onChange={this.handleLiquor}>
                     <option key="default" value={0} ></option>
                 <LiquorsDropdown />
                 </select>
+                <label for="addSpirit">Oz:</label>
                 <input type="number" value={this.state.oz} onChange={this.ounceChange} name="ounces" step="0.25"></input>
-                <input type="submit" value="Add Liquor"></input>
+                <input type="submit" value="Add Spirit"></input>
             </form>
 
                

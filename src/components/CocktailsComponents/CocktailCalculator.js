@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import LiquorsDropdown from '../LiquorsComponents/LiquorsDropdown'
 import MixerCocktail from '../MixersComponents/MixerCocktail'
 import CocktailLiquorForm from './CocktailLiquorForm'
+import CocktailMixerForm from './CocktailMixerForm'
 class CocktailCalculator extends Component {
 
  handleChange = e => {
@@ -26,11 +27,11 @@ findLiquor = (num) => {
       //let uniqueLiquor = [...new Set(liquorsList.map(liquor => liquor.id, liquor.brand, liquor.ppo ))]
       //let mixersList = []
       
-       
+       console.log(this.props.cocktail)
         return (
             <div>
                <CocktailLiquorForm />
-      
+                <CocktailMixerForm />
             </div>
         );
     }
