@@ -33,23 +33,26 @@ class CocktailLiquorForm extends Component {
         const value = e.target.value
         
         this.setState({
-            oz: value
+            oz: parseFloat(value)
         })
     } 
     submitLiquor = e => {
-
+        e.preventDefault()
+       this.props.storeIng(this.state)
     }  
     render() {
         
-        console.log(this.state.liquors)
+        
         return (
-            <form>
+            <form onSubmit={this.submitLiquor}>
                 <select name="Liquors" onChange={this.handleLiquor}>
                     <option key="default" value={0} ></option>
                 <LiquorsDropdown />
                 </select>
                 <input type="number" value={this.state.oz} onChange={this.ounceChange} name="ounces" step="0.25"></input>
+                <input type="submit" value="Add Liquor"></input>
             </form>
+
                
             
         );

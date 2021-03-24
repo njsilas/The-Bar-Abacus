@@ -1,5 +1,5 @@
-export const storeIng = liquor => {
+export const storeIng = ing => {
 return dispatch => {
-    dispatch({type: "ADDBOOZE", payload: liquor})
+    dispatch({type: "ADDING", payload: ing})
     }
 }
