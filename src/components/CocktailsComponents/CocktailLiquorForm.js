@@ -2,11 +2,13 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import LiquorsDropdown from '../LiquorsComponents/LiquorsDropdown'
 import { storeIng } from '../../actions/cocktailActions'
+
 class CocktailLiquorForm extends Component {
     state = {
         ingname: '',
         ppo: 0,
         oz: 0
+       
     }
     findliquorid = id => {
         if(id === 0) {
@@ -24,7 +26,8 @@ class CocktailLiquorForm extends Component {
         const liquor = this.findliquorid(liqid)
         this.setState({
             ingname: liquor.brand,
-            ppo: parseFloat(liquor.ppo)
+            ppo: parseFloat(liquor.ppo),
+            
         })
     }
     ounceChange = e => {
@@ -34,11 +37,13 @@ class CocktailLiquorForm extends Component {
         
         this.setState({
             oz: parseFloat(value)
+            
         })
     } 
     submitLiquor = e => {
         e.preventDefault()
-       this.props.storeIng(this.state)
+        const agg = {...this.state, ozppo: parseFloat(this.state.oz*this.state.ppo)}
+       this.props.storeIng(agg)
     }  
     render() {
         

@@ -39,7 +39,8 @@ class CocktailMixerForm extends Component {
         } 
         submitMixer = e => {
             e.preventDefault()
-           this.props.storeIng(this.state)
+        const agg = {...this.state, ozppo: parseFloat(this.state.oz*this.state.ppo)}
+       this.props.storeIng(agg)
         }  
         render() {
             return (

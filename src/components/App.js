@@ -10,7 +10,7 @@ class App extends React.Component {
       this.props.fetchLiquor()
   }
     render(){
-        console.log(this.state)
+        
         return (
             <div>
                 <NavOptions />

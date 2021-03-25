@@ -5,9 +5,7 @@ import { fetchLiquor } from '../../actions/liquorsActions'
 import LiquorsForm from './LiquorsForm'
 import LiquorsList from './LiquorsList';
 class LiquorsContainer extends Component {
-   componentDidMount() {
-       this.props.fetchLiquor()
-   }
+  
     render() {
         return (
             <div>
