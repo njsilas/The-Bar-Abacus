@@ -51,8 +51,8 @@ marginForDisplay = (tot, price) => {
     (accumulator, drink) => accumulator + drink.ozppo
     ,0
 )
-let sum = "$" + parseFloat(rawsum)
-let margin = this.marginForDisplay(sum, this.state.price)
+let sum = "$" + rawsum.toFixed(2)
+let margin = this.marginForDisplay(rawsum, this.state.price)
 
    
 console.log(this.state)

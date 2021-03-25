@@ -6,7 +6,7 @@ const CocktailDisplay = (props) => {
     return (
         <div>
            {cocktail.map(cocktail => <ul><li>{cocktail.oz} OZ of {cocktail.ingname} @ {cocktail.ppo} = ${cocktail.ozppo}</li></ul>)}
-           Total{sum} Margin:{margin} 
+           Total{sum}Margin:{margin} 
         </div>
     );
 };
