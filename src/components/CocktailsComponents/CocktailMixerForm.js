@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import MixerDropdown from '../MixersComponents/MixerDropdown'
 import { storeIng } from '../../actions/cocktailActions'
+import { Button, Form, Col, Row, FormGroup, Label, Input, FormText } from 'reactstrap';
 class CocktailMixerForm extends Component {
   
         state = {
@@ -44,22 +45,31 @@ class CocktailMixerForm extends Component {
         }  
         render() {
             return (
-              <div>
-            <form onSubmit={this.submitMixer}>
-            <label for="addmixer">Add Mixer:</label>
-                <select name="Mixers" onChange={this.handleMixer}>
+                <>
+            <Form onSubmit={this.submitMixer}>
+              <Row form>
+                <Col md={4}>
+                  <FormGroup>
+                    <Label for="addmixer">Add Mixer:</Label>
+                    <Input type="select" name="Mixers" onChange={this.handleMixer}>
                     <option key="default" value={0} ></option>
-                <MixerDropdown />
-                </select>
-                <label for="addMixer">Oz:</label>
-                <input type="number" value={this.state.oz} onChange={this.ounceChange} name="ounces" step="0.25"></input>
-                <input type="submit" value="Add Mixer"></input>
-            </form>
-
-                
-              </div>
-        );
-    }
+                   {this.props.mixers.map(mixer => <option key={mixer.id} name={mixer.name} value={mixer.id} > {mixer.name}</option>)}
+                </Input>
+                 </FormGroup>
+               </Col>
+                <Col md={4}>
+                  <FormGroup>
+                    <Label for="addSpirit">Oz:</Label>
+                    <Input type="number" value={this.state.oz} onChange={this.ounceChange} name="ounces" step="0.25"/>
+                    <Button type="submit" value="Add Mixer">Add Mixer</Button>
+                  </FormGroup>
+                </Col>
+              </Row>
+            </Form>
+            </>
+               
+            )
+        }
 }
 const mapStateToProps = state => {
     return {mixers: state.mixers}

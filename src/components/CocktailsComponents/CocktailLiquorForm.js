@@ -46,41 +46,29 @@ class CocktailLiquorForm extends Component {
        this.props.storeIng(agg)
     }  
     render() {
-       console.log(this.props.liquors)
+     
         
         return (
             
             <Form onSubmit={this.submitLiquor}>
-            
               <Row form>
                 <Col md={4}>
-                    <FormGroup>
-                <Label for="addliquor">Add Spirit:</Label>
-                <Input type="select" name="Liquors" onChange={this.handleLiquor}>
+                  <FormGroup>
+                    <Label for="addliquor">Add Spirit:</Label>
+                    <Input type="select" name="Liquors" onChange={this.handleLiquor}>
                     <option key="default" value={0} ></option>
                    {this.props.liquors.map(liquor => <option key={liquor.id} value={liquor.id} name={liquor.brand}> {liquor.brand}</option>)}
                 </Input>
                  </FormGroup>
                </Col>
-               
                 <Col md={4}>
-                <FormGroup >
-                    
+                  <FormGroup>
                     <Label for="addSpirit">Oz:</Label>
                     <Input type="number" value={this.state.oz} onChange={this.ounceChange} name="ounces" step="0.25"/>
-                      <Button type="submit" value="Add Spirit">Add Spirit</Button>
-                    </FormGroup>
+                    <Button type="submit" value="Add Spirit">Add Spirit</Button>
+                  </FormGroup>
                 </Col>
-                
-                <Col md={4}>
-                   
-                 
-                
-
-                
-                    </Col>
-                </Row>
-                
+              </Row>
             </Form>
 
                
