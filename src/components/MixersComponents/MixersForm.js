@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { addMixer } from '../../actions/mixersActions'
+import { Button, Form, Col, Row, FormGroup, Label, Input } from 'reactstrap';
 class MixersForm extends Component {
     state = {
         mixer_type: '',
@@ -22,26 +23,49 @@ class MixersForm extends Component {
        }
         render() {
             return (
-                <form onSubmit={this.handleSubmit}>
-            <label>Name:</label>
-            <input type='text' value={this.state.name} onChange={this.handleChange} name="name"/>
-            <br />
-            <label>Type:</label>
-            <input type='text' value={this.state.mixer_type} onChange={this.handleChange} name="mixer_type"/>
-            <br />
-            <label>Ingredients:</label>
-            <input type='text' value={this.state.ingreds} onChange={this.handleChange} name="ingreds"/>
-            <br />
-            <label>Price:</label>
-            <input type='number' value={this.state.price} onChange={this.handleChange} name="price"/>
-            <br />
-            <label>Yield (oz):</label>
-            <input type='number' value={this.state.yield} onChange={this.handleChange} name="yield"/>
-            <br />
-            <input type='submit' value="Store New Mixer" />
-        </form>
+                <Form onSubmit={this.handleSubmit}>
+                <Row form>
+                   <Col md={4}>
+                     <FormGroup>
+                       <Label>Name:</Label>
+                       <Input type='text' value={this.state.name} onChange={this.handleChange} name="name"/>
+                     </FormGroup>
+                   </Col>
+                   <Col md={4}>
+                     <FormGroup>
+                       <Label>Type:</Label>
+                       <Input type='text' value={this.state.mixer_type} onChange={this.handleChange} name="mixer_type"/>
+                     </FormGroup>
+                   </Col>
+                   <Col md={4}>
+                     <FormGroup>
+                       <Label>Ingredients:</Label>
+                       <Input type='text' value={this.state.image} onChange={this.handleChange} name="image"/>
+                     </FormGroup>
+                   </Col>
+                   <Col md={4}>
+                     <FormGroup>
+                       <Label>Price:</Label>
+                       <Input type='number' value={this.state.price} onChange={this.handleChange} name="price" min="0.00" step="0.01"/>
+                     </FormGroup>
+                   </Col>
+                   <Col md={4}>
+                    <FormGroup>
+                       <Label>Yield (oz):</Label>
+                       <Input type='number' value={this.state.yield} onChange={this.handleChange} name="yield"/>
+                     </FormGroup>
+                   </Col>
+                   <Col md={4}>
+                       <FormGroup>
+                       <Button type='submit' value="Store New Mixer">Store New Mixer</Button>
+                       </FormGroup>
+                   </Col>
+                 </Row>
+                
+                 </Form>
         );
     }
 }
+
 
 export default connect(null, {addMixer})(MixersForm);

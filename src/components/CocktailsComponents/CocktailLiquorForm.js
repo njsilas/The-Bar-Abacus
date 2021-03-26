@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import LiquorsDropdown from '../LiquorsComponents/LiquorsDropdown'
 import { storeIng } from '../../actions/cocktailActions'
-import { Button, Form, Col, Row, FormGroup, Label, Input, FormText } from 'reactstrap';
+import { Button, Form, Col, Row, FormGroup, Label, Input } from 'reactstrap';
 class CocktailLiquorForm extends Component {
     state = {
         ingname: '',
@@ -64,7 +64,7 @@ class CocktailLiquorForm extends Component {
                 <Col md={4}>
                   <FormGroup>
                     <Label for="addSpirit">Oz:</Label>
-                    <Input type="number" value={this.state.oz} onChange={this.ounceChange} name="ounces" step="0.25"/>
+                    <Input type="number" value={this.state.oz} onChange={this.ounceChange} name="ounces" step="0.25" min="0"/>
                     <Button type="submit" value="Add Spirit">Add Spirit</Button>
                   </FormGroup>
                 </Col>

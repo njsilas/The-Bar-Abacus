@@ -7,7 +7,7 @@ import CocktailLiquorForm from './CocktailLiquorForm'
 import CocktailMixerForm from './CocktailMixerForm'
 import  CocktailDisplay  from "./CocktailDisplay"
 import CocktailAccumulator from './CocktailAccumulator'
-import { Button } from 'reactstrap';
+import { Button, Form, Col, Row, FormGroup, Label, Input, FormText } from 'reactstrap';
 class CocktailCalculator extends Component {
 
 state = {
@@ -61,15 +61,16 @@ console.log(this.state)
             <div>
                <CocktailLiquorForm />
                 <CocktailMixerForm />
-                <form >
-                    <label>Cocktail Name:</label>
-                    <input type="text" name="name" onChange={this.handleChange}></input>
-                    <label>Potential Price</label>
-                    <input type="number" name="price" onChange={this.priceChange}></input>
-                    
-                  
-
-                </form>
+                <Form>
+                <Row form>
+                    <Col md={4}>
+                    <FormGroup>
+                    <Input type="text" name="name" onChange={this.handleChange} placeholder="Type Name Here..."></Input>
+                    <Input type="number" name="price" onChange={this.priceChange} placeholder="Menu Price: $" min="0.01" step="0.01"></Input>
+                    </FormGroup>
+                    </Col>
+                 </Row>
+                </Form>
                 <h1>{this.state.name}</h1>
                 <CocktailDisplay cocktail={this.props.cocktail} margin={margin} sum={sum}/>
                 
