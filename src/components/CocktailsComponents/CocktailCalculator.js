@@ -7,6 +7,7 @@ import CocktailLiquorForm from './CocktailLiquorForm'
 import CocktailMixerForm from './CocktailMixerForm'
 import  CocktailDisplay  from "./CocktailDisplay"
 import CocktailAccumulator from './CocktailAccumulator'
+import { Button } from 'reactstrap';
 class CocktailCalculator extends Component {
 
 state = {
@@ -60,15 +61,18 @@ console.log(this.state)
             <div>
                <CocktailLiquorForm />
                 <CocktailMixerForm />
-                <form onSubmit={this.setMargin}>
+                <form >
                     <label>Cocktail Name:</label>
                     <input type="text" name="name" onChange={this.handleChange}></input>
                     <label>Potential Price</label>
                     <input type="number" name="price" onChange={this.priceChange}></input>
-                    <input type="submit" value="check price"></input>
+                    
+                  
+
                 </form>
-                <CocktailDisplay cocktail={this.props.cocktail} margin={margin} sum={sum}/>
                 <h1>{this.state.name}</h1>
+                <CocktailDisplay cocktail={this.props.cocktail} margin={margin} sum={sum}/>
+                
              
                 <br></br>
               
@@ -76,15 +80,7 @@ console.log(this.state)
         );
     }
 }
-const addupDrink = ( { cocktail} ) => {
-    if(cocktail === undefined ){
-        return 0
-    }
-    else {
-        return cocktail.reduce((total, ing) => ({oz: total + ing.oz }), 0)
 
-    }
-}
 const mapStateToProps = state => {
    return {
     cocktail: state.cocktail
