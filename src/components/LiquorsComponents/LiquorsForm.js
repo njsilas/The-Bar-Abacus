@@ -48,7 +48,7 @@ class LiquorsFrom extends Component {
                   <Col md={4}>
                     <FormGroup>
                       <Label>Price:</Label>
-                      <Input type='number' value={this.state.price} onChange={this.handleChange} name="price" step="0.01" min="0.01"/>
+                      <Input type='number' value={this.state.price} onChange={this.handleChange} name="price" step="0.01"min="0.01"/>
                     </FormGroup>
                   </Col>
                   <Col md={4}>

@@ -9,6 +9,7 @@ class MixersContainer extends Component {
     render() {
         return (
             <div>
+                <h1>Mixers Available</h1>
                 <MixersForm />
                 <MixersList />
             </div>

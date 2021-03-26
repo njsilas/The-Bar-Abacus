@@ -1,12 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux'
+import { ListGroup, ListGroupItem } from 'reactstrap';
 //import MixersForm from './MixersForm'
 const MixersList = ({ mixers }) => {
    
     return (
         <>
            
-           {mixers.map(mixer => <ul key="MixersList"><li key={mixer.id}> {mixer.name}</li> </ul>)}
+           {mixers.map(mixer => <ListGroup key="MixersList"><ListGroupItem key={mixer.id}> {mixer.name} @ ${mixer.ppo}/oz</ListGroupItem> </ListGroup>)}
         </>
     );
 };

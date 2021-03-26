@@ -2,18 +2,19 @@
 import React, { Component} from 'react';
 import { connect } from 'react-redux' 
 import LiquorsDropdown from '../LiquorsComponents/LiquorsDropdown'
-
+import { removeall } from '../../actions/cocktailActions'
 import CocktailLiquorForm from './CocktailLiquorForm'
 import CocktailMixerForm from './CocktailMixerForm'
 import  CocktailDisplay  from "./CocktailDisplay"
 import CocktailAccumulator from './CocktailAccumulator'
-import { Button, Form, Col, Row, FormGroup, Label, Input, FormText } from 'reactstrap';
+import { Button, Form, Col, Row, FormGroup, Label, Input, ListGroup, ListGroupItem } from 'reactstrap';
 class CocktailCalculator extends Component {
 
 state = {
     name: "",
     price: 0,
     margin: 0
+
 }
 handleChange = e => {
     const {name, value} = e.target
@@ -29,8 +30,9 @@ priceChange = e => {
         
        })  
 }
-setMargin = e => {
-    e.preventDefault()
+removedrink = e => {
+    
+    removeall()
     
 }
 marginForDisplay = (tot, price) => {
@@ -56,18 +58,19 @@ let sum = "$" + rawsum.toFixed(2)
 let margin = this.marginForDisplay(rawsum, this.state.price)
 
    
-console.log(this.state)
+
         return (
             <div>
                <CocktailLiquorForm />
                 <CocktailMixerForm />
-                <Form>
+                <Form onSubmit={this.removedrink}>
                 <Row form>
                     <Col md={4}>
                     <FormGroup>
                     <Input type="text" name="name" onChange={this.handleChange} placeholder="Type Name Here..."></Input>
                     <Input type="number" name="price" onChange={this.priceChange} placeholder="Menu Price: $" min="0.01" step="0.01"></Input>
                     </FormGroup>
+                    <Button type='submit' value="Store New Spirit">Reset Drink</Button>
                     </Col>
                  </Row>
                 </Form>
@@ -87,4 +90,4 @@ const mapStateToProps = state => {
     cocktail: state.cocktail
     } 
 }
-export default connect(mapStateToProps)(CocktailCalculator);
+export default connect(mapStateToProps, { removeall })(CocktailCalculator);

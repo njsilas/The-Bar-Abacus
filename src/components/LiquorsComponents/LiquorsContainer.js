@@ -9,6 +9,7 @@ class LiquorsContainer extends Component {
     render() {
         return (
             <div>
+                <h1>Liquors Available</h1>
            <LiquorsForm />
             <LiquorsList />
             </div>
