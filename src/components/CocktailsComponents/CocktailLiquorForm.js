@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import LiquorsDropdown from '../LiquorsComponents/LiquorsDropdown'
 import { storeIng } from '../../actions/cocktailActions'
-
+import { Button, Form, Col, Row, FormGroup, Label, Input, FormText } from 'reactstrap';
 class CocktailLiquorForm extends Component {
     state = {
         ingname: '',
@@ -46,20 +46,42 @@ class CocktailLiquorForm extends Component {
        this.props.storeIng(agg)
     }  
     render() {
-        
+       console.log(this.props.liquors)
         
         return (
             
-            <form onSubmit={this.submitLiquor}>
-                <label for="addliquor">Add Spirit:</label>
-                <select name="Liquors" onChange={this.handleLiquor}>
+            <Form onSubmit={this.submitLiquor}>
+            
+              <Row form>
+                <Col md={4}>
+                    <FormGroup>
+                <Label for="addliquor">Add Spirit:</Label>
+                <Input type="select" name="Liquors" onChange={this.handleLiquor}>
                     <option key="default" value={0} ></option>
-                <LiquorsDropdown />
-                </select>
-                <label for="addSpirit">Oz:</label>
-                <input type="number" value={this.state.oz} onChange={this.ounceChange} name="ounces" step="0.25"></input>
-                <input type="submit" value="Add Spirit"></input>
-            </form>
+                   {this.props.liquors.map(liquor => <option key={liquor.id} value={liquor.id} name={liquor.brand}> {liquor.brand}</option>)}
+                </Input>
+                 </FormGroup>
+               </Col>
+               
+                <Col md={4}>
+                <FormGroup >
+                    
+                    <Label for="addSpirit">Oz:</Label>
+                    <Input type="number" value={this.state.oz} onChange={this.ounceChange} name="ounces" step="0.25"/>
+                      <Button type="submit" value="Add Spirit">Add Spirit</Button>
+                    </FormGroup>
+                </Col>
+                
+                <Col md={4}>
+                   
+                 
+                
+
+                
+                    </Col>
+                </Row>
+                
+            </Form>
 
                
             

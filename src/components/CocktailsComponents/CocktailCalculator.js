@@ -2,7 +2,7 @@
 import React, { Component} from 'react';
 import { connect } from 'react-redux' 
 import LiquorsDropdown from '../LiquorsComponents/LiquorsDropdown'
-import MixerCocktail from '../MixersComponents/MixerCocktail'
+
 import CocktailLiquorForm from './CocktailLiquorForm'
 import CocktailMixerForm from './CocktailMixerForm'
 import  CocktailDisplay  from "./CocktailDisplay"
