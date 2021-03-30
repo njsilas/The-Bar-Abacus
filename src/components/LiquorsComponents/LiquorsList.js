@@ -4,7 +4,7 @@ import { ListGroup, ListGroupItem } from 'reactstrap';
 const LiquorsList = ({ liquors }) => {
    
     return (
-        <div>
+        <div class="snameofstyleiwant">
            {liquors.map(liquor => <ListGroup key="liquormap"><ListGroupItem key={liquor.id}> {liquor.brand} @ ${liquor.ppo}/oz</ListGroupItem> </ListGroup>)}
         </div>
     );

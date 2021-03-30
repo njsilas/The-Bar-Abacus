@@ -80,5 +80,5 @@ class CocktailLiquorForm extends Component {
 const mapStateToProps = state => {
     return {liquors: state.liquors}
     }
-  
+
 export default connect(mapStateToProps, { storeIng })(CocktailLiquorForm);
