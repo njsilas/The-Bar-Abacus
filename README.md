@@ -1,71 +1,24 @@
-# Getting Started with Create React App
+# The Bar Abacus
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The Bar Abacus is an application built with React and Javascript. The Bar Abacus allows you to inventory liquors and mixers for a bar and use that data to mock up a cocktail and adjust it's price
 
-## Available Scripts
+## Installation
 
-In the project directory, you can run:
+Clone the repository at https://github.com/njsilas/The-Bar-Abacus.
+Once you have finished that. Run npm install. To use the database this application requires, please clone and install https://github.com/njsilas/TBA_backend
 
-### `yarn start`
+## Usage
+This application was designed for restaurateurs to be able to log their inventory and see a price per ounce of the mixer or liquor they log. It stores these in the Rails API and allows the user to access this data to mock up drinks and see what margins would be based off of selected prices.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Support
+Please reach out to njsilas@gmail.com if you are experiencing any issues
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Roadmap
+I have been very excited to bring this application to life. A few
+additions I will be making in my spare time are as followed. I plan on importing Michigan's database of liquors to act as my liquor model. This will give the user the availability to access real prices of liquors to ensure they are accurate before constructing drinks to price out.I also plan on adding a feature to save a drink to the database.
 
-### `yarn test`
+ ## Authors and acknowledgment
+ Nick Silas, creator of The Bar Abacus.
+ I would like to thank those individuals who helped me build
+ this site. Thank you all!
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# The-Bar-Abbacus
