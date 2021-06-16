@@ -4,7 +4,8 @@ class About extends Component {
     render() {
         return (
             <div>
-                testing about
+                The Bar Abacus is a tool for bar managers and beverage directors to price out cocktails for their
+                beverage program.
             </div>
         );
     }
