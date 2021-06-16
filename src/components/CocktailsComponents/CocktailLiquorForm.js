@@ -50,11 +50,11 @@ class CocktailLiquorForm extends Component {
         
         return (
             
-            <Form onSubmit={this.submitLiquor}>
+            <Form onSubmit={this.submitLiquor} className="text-center">
               <Row form>
                 <Col md={4}>
                   <FormGroup>
-                    <Label for="addliquor">Add Spirit:</Label>
+                    <Label for="addliquor" >Select a Spirit</Label>
                     <Input type="select" name="Liquors" onChange={this.handleLiquor}>
                     <option key="default" value={0} ></option>
                    {this.props.liquors.map(liquor => <option key={liquor.id} value={liquor.id} name={liquor.brand}> {liquor.brand}</option>)}
@@ -63,7 +63,7 @@ class CocktailLiquorForm extends Component {
                </Col>
                 <Col md={4}>
                   <FormGroup>
-                    <Label for="addSpirit">Oz:</Label>
+                    <Label for="addSpirit">OZ</Label>
                     <Input type="number" value={this.state.oz} onChange={this.ounceChange} name="ounces" step="0.25" min="0"/>
                     <Button type="submit" value="Add Spirit">Add Spirit</Button>
                   </FormGroup>

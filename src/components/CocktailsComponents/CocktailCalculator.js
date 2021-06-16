@@ -6,7 +6,7 @@ import { removeall } from '../../actions/cocktailActions'
 import CocktailLiquorForm from './CocktailLiquorForm'
 import CocktailMixerForm from './CocktailMixerForm'
 import  CocktailDisplay  from "./CocktailDisplay"
-import CocktailAccumulator from './CocktailAccumulator'
+
 import { Button, Form, Col, Row, FormGroup, Label, Input, ListGroup, ListGroupItem } from 'reactstrap';
 class CocktailCalculator extends Component {
 
