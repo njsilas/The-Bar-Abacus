@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
-import LiquorsDropdown from '../LiquorsComponents/LiquorsDropdown'
 import { storeIng } from '../../actions/cocktailActions'
 import { Button, Form, Col, Row, FormGroup, Label, Input } from 'reactstrap';
 class CocktailLiquorForm extends Component {

@@ -1,7 +1,6 @@
 
 import React, { Component} from 'react';
 import { connect } from 'react-redux' 
-import LiquorsDropdown from '../LiquorsComponents/LiquorsDropdown'
 import { removeall } from '../../actions/cocktailActions'
 import CocktailLiquorForm from './CocktailLiquorForm'
 import CocktailMixerForm from './CocktailMixerForm'

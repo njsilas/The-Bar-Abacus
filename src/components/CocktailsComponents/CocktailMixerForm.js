@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
-import MixerDropdown from '../MixersComponents/MixerDropdown'
 import { storeIng } from '../../actions/cocktailActions'
 import { Button, Form, Col, Row, FormGroup, Label, Input, FormText } from 'reactstrap';
 class CocktailMixerForm extends Component {
