@@ -1,7 +1,7 @@
 export const fetchLiquor = () => {
     return (dispatch) => {
         
-        fetch('http://localhost:3000/liquors')
+        fetch('https://the-bar-abacus.herokuapp.com/liquors')
         .then(resp => resp.json())
         .then(liquors => {
             
@@ -11,7 +11,7 @@ export const fetchLiquor = () => {
 }
 export const addLiq = liquor => {
     return dispatch => {
-        fetch('http://localhost:3000/liquors', {
+        fetch('https://the-bar-abacus.herokuapp.com/liquors', {
             method: 'POST',
             body: JSON.stringify(liquor),
             headers: {'Content-Type': 'application/json' }

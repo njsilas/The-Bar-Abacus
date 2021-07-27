@@ -1,7 +1,7 @@
 export const fetchMixer = () => {
     return (dispatch) => {
         
-        fetch('http://localhost:3000/mixers')
+        fetch('https://the-bar-abacus.herokuapp.com/mixers')
         .then(resp => resp.json())
         .then(mixers => {
             dispatch({ type: 'FETCH_MIXERS', payload: mixers})
@@ -10,7 +10,7 @@ export const fetchMixer = () => {
 }
 export const addMixer = mixer => {
     return dispatch => {
-        fetch('http://localhost:3000/mixers', {
+        fetch('https://the-bar-abacus.herokuapp.com/mixers', {
         method: 'POST',
         body: JSON.stringify(mixer),
         headers: {'Content-Type': 'application/json' }
