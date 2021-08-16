@@ -13,6 +13,7 @@ class LiquorsFrom extends Component {
        code: ''
 
    }
+  
    handleChange = e => {
        const {name, value} = e.target
        this.setState({
@@ -24,8 +25,12 @@ class LiquorsFrom extends Component {
     this.props.addLiq(this.state)
    }
     render() {
+      const formStyle = {
+        margin: '15px',
+        border: '2px solid black'
+      }
         return (
-            <Form onSubmit={this.handleSubmit}>
+            <Form onSubmit={this.handleSubmit} style={formStyle}>
                <Row form>
                   <Col md={4}>
                     <FormGroup>
@@ -37,12 +42,6 @@ class LiquorsFrom extends Component {
                     <FormGroup>
                       <Label>Type:</Label>
                       <Input type='text' value={this.state.spirit_type} onChange={this.handleChange} name="spirit_type"/>
-                    </FormGroup>
-                  </Col>
-                  <Col md={4}>
-                    <FormGroup>
-                      <Label>Image Link:</Label>
-                      <Input type='text' value={this.state.image} onChange={this.handleChange} name="image"/>
                     </FormGroup>
                   </Col>
                   <Col md={4}>
