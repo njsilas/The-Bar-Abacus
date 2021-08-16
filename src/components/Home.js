@@ -10,7 +10,7 @@ class Home extends Component {
                     <CardBody>
                         <CardText >The Bar Abacus allows you to add liquors and mixers to 
                     your database and mock up drinks with those ingredients. The
-                    cocktail creator will display the price of the drink and the margin</CardText>
+                    cocktail creator will display the price of the drink and the margin TEST</CardText>
                     </CardBody>
                 </Card>
                
