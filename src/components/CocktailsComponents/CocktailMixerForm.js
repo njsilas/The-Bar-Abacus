@@ -43,13 +43,17 @@ class CocktailMixerForm extends Component {
        this.props.storeIng(agg)
         }  
         render() {
-            return (
+          const formStyle = {
+            margin: '15px',
+            border: '2px solid black'
+          }
+          return (
                 <>
-            <Form onSubmit={this.submitMixer}>
+            <Form onSubmit={this.submitMixer} style={formStyle} className="text-center">
               <Row form>
                 <Col md={4}>
                   <FormGroup>
-                    <Label for="addmixer">Add Mixer:</Label>
+                    <Label for="addmixer">Add Mixer</Label>
                     <Input type="select" name="Mixers" onChange={this.handleMixer}>
                     <option key="default" value={0} ></option>
                    {this.props.mixers.map(mixer => <option key={mixer.id} name={mixer.name} value={mixer.id} > {mixer.name}</option>)}
@@ -58,7 +62,7 @@ class CocktailMixerForm extends Component {
                </Col>
                 <Col md={4}>
                   <FormGroup>
-                    <Label for="addSpirit">Oz:</Label>
+                    <Label for="addSpirit">Oz</Label>
                     <Input type="number" value={this.state.oz} onChange={this.ounceChange} name="ounces" min="0" step="0.25"/>
                     <Button type="submit" value="Add Mixer">Add Mixer</Button>
                   </FormGroup>

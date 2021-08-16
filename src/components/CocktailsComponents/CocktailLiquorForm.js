@@ -45,11 +45,14 @@ class CocktailLiquorForm extends Component {
        this.props.storeIng(agg)
     }  
     render() {
-     
+      const formStyle = {
+        margin: '15px',
+        border: '2px solid black'
+      }
         
         return (
             
-            <Form onSubmit={this.submitLiquor} className="text-center">
+            <Form onSubmit={this.submitLiquor} className="text-center" style={formStyle}>
               <Row form>
                 <Col md={4}>
                   <FormGroup>
