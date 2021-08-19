@@ -73,10 +73,7 @@ let margin = this.marginForDisplay(rawsum, this.state.price)
                 </Form>
                 <h1>{this.state.name}</h1>
                 <CocktailDisplay cocktail={this.props.cocktail} margin={margin} sum={sum}/>
-                
-             
                 <br></br>
-              
             </div>
         );
     }
