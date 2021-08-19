@@ -30,9 +30,7 @@ priceChange = e => {
        })  
 }
 removedrink = e => {
-    
     removeall()
-    
 }
 marginForDisplay = (tot, price) => {
     if(price === 0 || tot === 0) {
