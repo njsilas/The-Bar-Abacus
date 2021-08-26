@@ -19,7 +19,6 @@ class LiquorsContainer extends Component {
             <div>
                 <h1>Liquors Available</h1>
            <LiquorsForm />
-           
             <LiquorsList/>
             </div>
         );
