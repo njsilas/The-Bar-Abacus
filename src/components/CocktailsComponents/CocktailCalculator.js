@@ -82,6 +82,6 @@ let margin = this.marginForDisplay(rawsum, this.state.price)
 const mapStateToProps = state => {
    return {
     cocktail: state.cocktail
-    } 
+   } 
 }
 export default connect(mapStateToProps, { removeall })(CocktailCalculator);
