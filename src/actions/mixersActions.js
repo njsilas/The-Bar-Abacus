@@ -1,6 +1,5 @@
 export const fetchMixer = () => {
     return (dispatch) => {
-        
         fetch('https://the-bar-abacus.herokuapp.com/mixers')
         .then(resp => resp.json())
         .then(mixers => {
