@@ -43,10 +43,7 @@ marginForDisplay = (tot, price) => {
     
 }
     render() {
-     // let liquorsList = [];
-      //this.props.liquors.forEach(({id, brand, ppo }) => liquorsList.push({id, brand, ppo}))
-      //let uniqueLiquor = [...new Set(liquorsList.map(liquor => liquor.id, liquor.brand, liquor.ppo ))]
-      //let mixersList = []
+    
    let rawsum = this.props.cocktail.reduce(
     (accumulator, drink) => accumulator + drink.ozppo
     ,0
