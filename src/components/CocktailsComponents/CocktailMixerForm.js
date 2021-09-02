@@ -62,7 +62,7 @@ class CocktailMixerForm extends Component {
                </Col>
                 <Col md={4}>
                   <FormGroup>
-                    <Label for="addSpirit">Oz</Label>
+                    <Label for="addSpirit">OZ</Label>
                     <Input type="number" value={this.state.oz} onChange={this.ounceChange} name="ounces" min="0" step="0.25"/>
                     <Button type="submit" value="Add Mixer">Add Mixer</Button>
                   </FormGroup>

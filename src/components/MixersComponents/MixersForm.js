@@ -22,8 +22,12 @@ class MixersForm extends Component {
         this.props.addMixer(this.state)
        }
         render() {
+          const formStyle = {
+            margin: '15px',
+            border: '2px solid black'
+          }
             return (
-                <Form onSubmit={this.handleSubmit}>
+                <Form onSubmit={this.handleSubmit} style={formStyle}>
                 <Row form>
                    <Col md={4}>
                      <FormGroup>
