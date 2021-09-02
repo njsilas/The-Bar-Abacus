@@ -16,7 +16,7 @@ class LiquorsContainer extends Component {
   }
     render() {
         return (
-            <div>
+            <div >
                 <h1>Liquors Available</h1>
            <LiquorsForm />
             <LiquorsList/>
