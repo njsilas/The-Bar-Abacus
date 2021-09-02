@@ -4,7 +4,7 @@ import { Card, Button, CardHeader, CardFooter, CardBody,
 class Home extends Component {
     render() {
         const style = {
-            boxSizing: "content-box",
+            boxSizing: "border-box",
             padding: "10px",
             backgroud: "white"
         }
