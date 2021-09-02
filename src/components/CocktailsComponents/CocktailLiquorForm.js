@@ -47,13 +47,12 @@ class CocktailLiquorForm extends Component {
     render() {
       const formStyle = {
         margin: '15px',
-        border: '2px solid black',
-        borderStyle: "outset"
+        borderStyle: "inset"
       }
         
         return (
             
-            <Form onSubmit={this.submitLiquor} style="formStyle" className="text-center" >
+            <Form onSubmit={this.submitLiquor} style={formStyle} className="text-center" >
               <Row form>
                 <Col md={4}>
                   <FormGroup>

@@ -45,12 +45,11 @@ class CocktailMixerForm extends Component {
         render() {
           const formStyle = {
             margin: '15px',
-            border: '2px solid black',
-            borderStyle: 'inset'
+            borderStyle: 'outset'
           }
           return (
                 <>
-            <Form onSubmit={this.submitMixer} className="text-center">
+            <Form onSubmit={this.submitMixer} style={formStyle} className="text-center">
               <Row form>
                 <Col md={4}>
                   <FormGroup>

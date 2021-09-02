@@ -66,7 +66,7 @@ const style = {
                <CocktailLiquorForm />
                 <CocktailMixerForm />
                 <Form onSubmit={this.removedrink}>
-                <Row form>
+                <Row form style={{border: '2px', borderStyle: 'solid', margin: '2px', padding: '5px'}}>
                     <Col md={4}>
                     <FormGroup>
                     <Input type="text" name="name" onChange={this.handleChange} placeholder="Type Name Here..."></Input>
