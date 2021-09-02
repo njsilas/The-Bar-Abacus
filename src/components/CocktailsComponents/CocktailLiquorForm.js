@@ -52,7 +52,7 @@ class CocktailLiquorForm extends Component {
         
         return (
             
-            <Form onSubmit={this.submitLiquor} className="text-center" style={formStyle}>
+            <Form onSubmit={this.submitLiquor} className="text-center" >
               <Row form>
                 <Col md={4}>
                   <FormGroup>

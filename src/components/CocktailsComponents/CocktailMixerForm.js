@@ -49,7 +49,7 @@ class CocktailMixerForm extends Component {
           }
           return (
                 <>
-            <Form onSubmit={this.submitMixer} style={formStyle} className="text-center">
+            <Form onSubmit={this.submitMixer} className="text-center">
               <Row form>
                 <Col md={4}>
                   <FormGroup>

@@ -57,7 +57,8 @@ let margin = this.marginForDisplay(rawsum, this.state.price)
 const style = {
     boxSizing: "border-box",
     padding: "10px",
-    backgroud: "white"
+    backgroud: "white",
+    border: '2px solid black'
 }
 
         return (
