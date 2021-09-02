@@ -45,7 +45,8 @@ class CocktailMixerForm extends Component {
         render() {
           const formStyle = {
             margin: '15px',
-            border: '2px solid black'
+            border: '2px solid black',
+            borderStyle: 'inset'
           }
           return (
                 <>

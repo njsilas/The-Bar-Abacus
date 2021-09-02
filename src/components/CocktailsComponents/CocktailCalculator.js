@@ -62,7 +62,7 @@ const style = {
 }
 
         return (
-            <div style={style}>
+            <div>
                <CocktailLiquorForm />
                 <CocktailMixerForm />
                 <Form onSubmit={this.removedrink}>
