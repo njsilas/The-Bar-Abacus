@@ -48,7 +48,6 @@ class CocktailLiquorForm extends Component {
         margin: '15px',
         borderStyle: "inset"
       }
-        
         return (
             
             <Form onSubmit={this.submitLiquor} style={formStyle} className="text-center" >
