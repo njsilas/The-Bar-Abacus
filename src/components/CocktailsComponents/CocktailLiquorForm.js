@@ -7,7 +7,6 @@ class CocktailLiquorForm extends Component {
         ingname: '',
         ppo: 0,
         oz: 0
-       
     }
     findliquorid = id => {
         if(id === 0) {
