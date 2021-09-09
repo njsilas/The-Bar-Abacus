@@ -29,7 +29,6 @@ class CocktailMixerForm extends Component {
             })
         }
         ounceChange = e => {
-        
             const value = e.target.value
             this.setState({
                 oz: parseFloat(value)
