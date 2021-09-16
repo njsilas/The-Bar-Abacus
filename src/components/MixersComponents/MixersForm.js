@@ -65,7 +65,6 @@ class MixersForm extends Component {
                        </FormGroup>
                    </Col>
                  </Row>
-                
                  </Form>
         );
     }
