@@ -5,7 +5,6 @@ import { fetchMixer } from '../../actions/mixersActions'
 import MixersForm from './MixersForm'
 import MixersList from './MixersList'
 class MixersContainer extends Component {
-  
     render() {
         return (
             <div>
