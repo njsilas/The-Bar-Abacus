@@ -6,7 +6,6 @@ const MixersList = ({ mixers }) => {
    
     return (
         <>
-           
            {mixers.map(mixer => <ListGroup key="MixersList"><ListGroupItem key={mixer.id}> {mixer.name} @ ${mixer.ppo}/oz</ListGroupItem> </ListGroup>)}
         </>
     );
