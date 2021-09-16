@@ -49,7 +49,6 @@ class CocktailLiquorForm extends Component {
         borderStyle: "inset"
       }
         return (
-            
             <Form onSubmit={this.submitLiquor} style={formStyle} className="text-center" >
               <Row form>
                 <Col md={4}>
