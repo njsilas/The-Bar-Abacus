@@ -3,11 +3,6 @@ import { Card, CardHeader, CardBody,
      CardText } from 'reactstrap'
 class Home extends Component {
     render() {
-        const style = {
-            boxSizing: "border-box",
-            padding: "10px",
-            backgroud: "white"
-        }
     
         return (
             <div>
