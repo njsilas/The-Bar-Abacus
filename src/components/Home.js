@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Card, Button, CardHeader, CardFooter, CardBody,
-    CardTitle, CardText } from 'reactstrap'
+import { Card, CardHeader, CardBody,
+     CardText } from 'reactstrap'
 class Home extends Component {
     render() {
         const style = {
