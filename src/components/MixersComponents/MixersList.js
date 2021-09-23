@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux'
 import { ListGroup, ListGroupItem } from 'reactstrap';
-//import MixersForm from './MixersForm'
+
 const MixersList = ({ mixers }) => {
    
     return (
