@@ -7,13 +7,7 @@ class LiquorsContainer extends Component {
   //add input field 
 
   
-  setUpvote = e => {
-      const numforupvote = e.target.value
-      this.setState({
-        
 
-      })
-  }
     render() {
         return (
             <div >
