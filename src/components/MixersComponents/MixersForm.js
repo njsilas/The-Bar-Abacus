@@ -69,6 +69,4 @@ class MixersForm extends Component {
         );
     }
 }
-
-
 export default connect(null, {addMixer})(MixersForm);
