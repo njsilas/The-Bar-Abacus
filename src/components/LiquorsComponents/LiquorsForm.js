@@ -80,6 +80,5 @@ class LiquorsFrom extends Component {
         );
     }
 }
-
 export default connect(null, {addLiq})(LiquorsFrom);
         
