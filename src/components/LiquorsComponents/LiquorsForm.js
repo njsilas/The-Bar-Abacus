@@ -75,7 +75,6 @@ class LiquorsFrom extends Component {
                       </FormGroup>
                   </Col>
                 </Row>
-              
                 </Form>
           
         );
