@@ -21,6 +21,18 @@ export const addLiq = liquor => {
     }
 
 }
+export const removeLiq = (liquor) => {
+    return dispatch => {
+        fetch('https://the-bar-abacus.herokuapp.com/liquors/' + liquor.id, {
+        method: 'DELETE'
+        })
+        .then(resp => resp.json())
+        .then(liquors => {
+            
+            dispatch({ type: 'FETCH_LIQUORS', payload: liquors})
+        })
+  }
+}
 
 
 
