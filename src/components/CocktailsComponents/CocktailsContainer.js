@@ -9,7 +9,6 @@ class CocktailsContainer extends Component {
         return (
             <div >
                 <CocktailCalculator />
-                
             </div>
         );
     }
