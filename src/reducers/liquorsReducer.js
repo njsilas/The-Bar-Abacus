@@ -4,7 +4,7 @@ export const liquorsReducer = (state = [], action) => {
             return action.payload
         case 'ADD_LIQ':
                 return [...state, action.payload]
-            default:
+             default:
                 return state
     }
 }

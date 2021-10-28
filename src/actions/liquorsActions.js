@@ -19,5 +19,8 @@ export const addLiq = liquor => {
         .then(resp => resp.json())
         .then(liquor => dispatch({ type: 'ADD_LIQ', payload: liquor}))
     }
-     
+
+}
+export const removeLiq = liquor => {
+    
 }
