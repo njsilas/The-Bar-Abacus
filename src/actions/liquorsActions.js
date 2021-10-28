@@ -21,6 +21,6 @@ export const addLiq = liquor => {
     }
 
 }
-export const removeLiq = liquor => {
-    
-}
+
+
+
